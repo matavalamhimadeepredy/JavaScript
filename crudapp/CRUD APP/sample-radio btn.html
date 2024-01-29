@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+   <form>
+    <label for="gender">gender</label><br>
+   male<input type="radio" name="gender" value="male"><br>
+    female <input type="radio" name="gender" value="female"><br>
+    others <input type="radio" name="gender" value="others">
+    
+   <button type="button" onclick="registerUser()">Submit</button>
+    <button type="button" onclick="selectGender()">Select Gender</button>
+</form>
+<script>
+    function registerUser(){
+
+        var user = {
+            fname:"",
+            lname:"",
+            
+        }
+        var allRadioBtns = document.getElementsByName("gender");
+        for(i=0;i<allRadioBtns.length;i++){
+            if(allRadioBtns[i].checked === true){
+                console.log(allRadioBtns[i].value)
+                user.gender = allRadioBtns[i].value
+            }
+        }
+        console.log(user)
+    }
+   
+   </script>
+   </body>
+</html>

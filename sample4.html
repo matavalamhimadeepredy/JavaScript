@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>email</th>
+          <th>username</th>
+          <th>password</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var student = [
+    {
+        "id": 1,
+        "email": "JTruth@scelerisque.com",
+        "username": "AForgey",
+        "password": "oGd3Q"
+    },
+    {
+        "id": 2,
+        "email": "ROdle@porta.gov",
+        "username": "SDixon",
+        "password": "8ORzN"
+    },
+    {
+        "id": 3,
+        "email": "TStubbs@nec.ly",
+        "username": "BRutt",
+        "password": "EhpC1"
+    },
+    {
+        "id": 4,
+        "email": "KVicari@donec.net",
+        "username": "KAviles",
+        "password": "35tps"
+    },
+    {
+        "id": 5,
+        "email": "KSalguero@hendrerit.io",
+        "username": "CShay",
+        "password": "NVJcN"
+    },
+    {
+        "id": 6,
+        "email": "MSpellicy@fringilla.ly",
+        "username": "CRehnke",
+        "password": "Kf2kv"
+    },
+    {
+        "id": 7,
+        "email": "YRose@nec.ly",
+        "username": "KPace",
+        "password": "DqYZQ"
+    },
+    {
+        "id": 8,
+        "email": "LDarling@vitae.net",
+        "username": "SHolcombe",
+        "password": "JtRnO"
+    },
+    {
+        "id": 9,
+        "email": "SLindsey@et.net",
+        "username": "NChatham",
+        "password": "oxbfc"
+    },
+    {
+        "id": 10,
+        "email": "SWhitman@magna.gov",
+        "username": "PMckenzie",
+        "password": "WfiLN"
+    }
+]
+      
+      console.log(student.length);
+      function displaystudents() {
+        document.querySelector("tbody").innerHTML = "";
+            }
+      for(i=0;i<student.length;i++){
+            var myTr = document.createElement("tr");
+            console.log(students[i])
+            for(a in students[i]){
+                var td = document.createElement('td');
+                td.innerHTML = students[i][a]
+                myTr.appendChild(td)
+            }
+           
+            document.querySelector("tbody").appendChild(myTr)
+        }
+
+      
+
+        function deleteUser(i){
+            students.splice(i,1)
+            displayStudents()
+        }
+        displayStudents()
+    </script>
+  </body>
+</html>

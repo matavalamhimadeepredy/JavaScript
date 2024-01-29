@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="fname">fname</label>
+      <input type="text" id="fname" /><br />
+      <label for="lname">lname</label>
+      <input type="text" id="lname" /><br />
+      <label for="email">email</label>
+      <input type="text" id="email"><br>
+
+      <button type="button" onclick="adduser()">adduser</button>
+    </form>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>fname</th>
+          <th>lname</th>
+          <th>email</th>
+          <th>password</th>
+          <th>edit</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var users = [];
+      function adduser() {
+      var details = {
+        fname: document.getElementById("fname").value,
+        lname: document.getElementById("lname").value,
+        email:document.getElementById("email").value,
+        password:document.getElementById("password")
+      };
+      users.push(details);
+      displayusers();
+    }
+      function displayusers() {
+        for (i = 0; i < users.length; i++) {
+          var mytr = document.createElement("tr");
+          for (a in users[i]) {
+            var mytd = document.createElement("td");
+            mytd.innerHTML = users[i][a];
+
+            mytr.appendChild(mytd);
+          }
+          document.querySelector("tbody").appendChild(mytr);
+        }
+      }
+    </script>
+  </body>
+</html>

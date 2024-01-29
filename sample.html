@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1 ">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Email</th>
+          <th>UserName</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var employe = [
+        {
+          id: 76,
+          email: "MByrd@ipsum.gov",
+          username: "FRingling",
+          password: "wC7W5",
+        },
+        {
+          id: 77,
+          email: "MWelle@porta.gov",
+          username: "DHenderson",
+          password: "e6uSA",
+        },
+        {
+          id: 78,
+          email: "GWoods@aenean.com",
+          username: "CChristiansen",
+          password: "scHYE",
+        },
+        {
+          id: 79,
+          email: "BHutchings@dui.gov",
+          username: "GZavala",
+          password: "SW2sQ",
+        },
+        {
+          id: 80,
+          email: "SCoopr@adipiscing.ly",
+          username: "RMeek",
+          password: "0i5wb",
+        },
+      ];
+
+      employe.forEach((emp) => {
+        var myTr = document.createElement("tr");
+        document.querySelector("tbody").appendChild(myTr);
+        for (x in emp) {
+          var td = document.createElement("td");
+          td.innerHTML = emp[x];
+          myTr.appendChild(td);
+        }     
+      });
+    </script>
+  </body>
+</html>

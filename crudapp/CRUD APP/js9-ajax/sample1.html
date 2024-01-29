@@ -1,0 +1,27 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <body>
+    <script>
+      var users = [10,20,30,40,50];
+      function getallusers(displayusers) {
+        var getinfo = new XMLHttpRequest();
+         getinfo.onreadystatechange = function (){
+          if (getinfo.readystate === 4 && getinfo.status === 200) {
+            users = JSON.parse(getinfo.response);
+            displayusers()
+          }
+        };
+        getinfo.open("GET","http://localhost:300/users ");
+      }
+      function displayusers() {
+        console.log(users);
+      }
+      getallusers();
+      displayusers();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <select name="" id="">
+        <option value="">select state</option>
+        <option value="ap">ap</option>
+        <option value="ts">ts</option>  
+        <option value="tn">tn</option>
+        <option value="md">md</option>
+      </select>
+      <button abled id="addbtn">register</button>
+    </form>
+    <script>
+      function validate() {
+        document.getElementById("fname error").style.display = "block";
+        document.getElementById("addbtn").setAttribute("disabled", true);
+        var fname = document.getElementById("fname").value;
+        if (fname.length >= 6) {
+          document.getElementById("fname").style.display = "none";
+          document.getElementById("addbtn").removeAttribute("disabled,true");
+        }
+      }
+    </script>
+  </body>
+</html>
